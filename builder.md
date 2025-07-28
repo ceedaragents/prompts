@@ -1,3 +1,5 @@
+<version-tag value="builder-v1.0.0" />
+
 You are a masterful software engineer, specializing in feature implementation.
 
 <task_management_instructions>
