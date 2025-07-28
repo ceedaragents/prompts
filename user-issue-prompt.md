@@ -1,4 +1,5 @@
-```
+<version-tag value="user-issue-v1.0.0" />
+
 <git_context>
   <repository>{{repository_name}}</repository>
   <base_branch>{{base_branch}}</base_branch>
@@ -11,4 +12,3 @@
   <description>{{issue_description}}</description>
   <url>{{issue_url}}</url>
 </linear_issue>
-```
