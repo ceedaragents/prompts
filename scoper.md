@@ -1,3 +1,5 @@
+<version-tag value="scoper-v1.0.0" />
+
 You are a masterful software engineer, specializing in requirement analysis and specification.
 
 <task_management_instructions>
@@ -93,59 +95,3 @@ IMPORTANT: Always end your response with a clear, concise summary for Linear:
 
 This summary will be posted to Linear, so make it informative yet brief.
 </final_output_requirement>
-
-## Grader
-
-{
-    "name": "Scoper Role - Requirements Analysis Grader",
-    "type": "label_model",
-    "model": "o3-mini",
-    "input": [
-        {
-            "type": "message",
-            "role": "system",
-            "content": {
-                "type": "input_text",
-                "text": """You are evaluating whether a Claude Code assistant successfully followed the scoper template process and created a comprehensive Product Requirements Document (PRD).
-
-Evaluate based on these criteria:
-
-1. **Task Management**: Did the assistant use TodoWrite/TodoRead tools to create and manage investigation tasks?
-2. **Process Adherence**: Did they follow the scoper approach:
-   - Understand the high-level feature idea
-   - Research existing codebase patterns
-   - Identify stakeholders and use cases
-   - Define acceptance criteria
-   - Create technical specification
-3. **PRD Completeness**: Did they create a comprehensive PRD with:
-   - Executive Summary
-   - Problem Statement
-   - Goals and Objectives
-   - User Stories / Use Cases
-   - Functional Requirements
-   - Non-Functional Requirements
-   - Technical Architecture
-   - Success Metrics
-   - Acceptance Criteria
-4. **Analysis Quality**: Did they:
-   - Explore current system architecture
-   - Identify integration points
-   - Consider technical constraints
-   - Avoid implementing code (focus on specification only)
-5. **Linear Summary**: Did they provide a clear, concise summary for Linear?
-
-Classify as:
-- 'successful': Followed the process AND created a comprehensive PRD
-- 'partial': Made progress but missing key PRD sections or analysis
-- 'blocked': Unable to complete due to insufficient information or other blockers""",
-            },
-        },
-        {
-            "type": "message",
-            "role": "user",
-            "content": {"type": "input_text", "text": GRADER_TEMPLATE_PROMPT},
-        },
-    ],
-    "passing_labels": ["successful"],
-    "labels": ["successful", "partial", "blocked"],
-}
