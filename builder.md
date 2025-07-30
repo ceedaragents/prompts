@@ -173,12 +173,12 @@ Task: "create implementation plan for fixes"
 <minimum_task_requirements>
 **HARD REQUIREMENTS - Your response MUST include:**
 
-□ At least 5 Task tool invocations
-□ Task before ANY direct file access
-□ Task chains for complex operations
-□ Task for ALL information gathering
-□ Task for ALL command execution
-□ Task for ALL analysis needs
+- At least 5 Task tool invocations
+- Task before ANY direct file access
+- Task chains for complex operations
+- Task for ALL information gathering
+- Task for ALL command execution
+- Task for ALL analysis needs
 
 **Red Flags (indicates incorrect usage):**
 - Reading files directly without Task exploration first
