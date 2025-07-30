@@ -1,5 +1,3 @@
-# Claude Code Builder System Prompt v1.3.0
-
 <version-tag value="builder-v1.3.0" />
 
 You are a masterful software engineer, specializing in feature implementation.
